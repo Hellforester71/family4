@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- язык страницы -->
+<html lang="ru">
+
+<head>
+   <!-- кодировка страницы -->
+   <meta charset="UTF-8">
+   <!-- адаптив -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- для intertet explorer -->
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- заголовок страницы в браузере -->
+   <title>Семейный альбом</title>
+   <!-- шрифты -->
+   <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lobster&family=Marck+Script&family=Pacifico&display=swap"
+      rel="stylesheet">
+   <!-- анимация  -->
+   <link rel="stylesheet" href="./css/animate.min.css">
+   <!-- мой css  -->
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+<!-- отображаемое тело страницы -->
+
+<body>
+   <!-- оболочка для демонстрации -->
+   <div class="wrapper">    
+         <header class="header">
+            <nav class="header__menu">
+               <div class="header__burger">
+                  <span class="header__burger-span"></span>
+               </div>
+               <ul class="header__list">
+                  <li class="header__item"><a rel='Scroll' href="#content__anya">Аня</a></li>
+                  <li class="header__item"><a rel='Scroll' href="#content__travels">Путешествия</a></li>
+                  <li class="header__item"><a rel='Scroll' href="#content__tyumen">Тюмень</a></li>
+                  <li class="header__item"><a rel='Scroll' href="#content__wedding">Свадьба</a></li>
+                  <li class="header__item"><a  rel='Scroll' href="#content__video">Видео</a></li>
+                  <li class="header__item"><a  rel='Scroll' href="#content__other">Разное</a></li>
+                  <li class="header__item header__item-last"><a href="autors.html">Авторы</a></li>
+               </ul>
+            </nav>
+            <div class="header__tittle">
+               <h1>Семейный альбом</h1>
+               <p class="header__subtittle">2020</p>
+            </div>
+         </header>
+         <div class="content__wrapper">
+            <div id="content__anya" class="content__anya">
+               <a href="anyaMenu.html">
+                  <h2>Аня</h2>
+               </a>
+               <div class="content__absolute"></div>
+            </div>
+            <div  id="content__travels" class="content__travels">
+               <a href="travels.html">
+                  <h2>Путешествия</h2>
+               </a>
+               <div class="content__absolute"></div>
+            </div>
+            <div id="content__tyumen" class="content__tyumen">
+               <a href="tyumen.html">
+                  <h2>Тюмень</h2>
+               </a>
+               <div class="content__absolute"></div>
+            </div>
+            <div id="content__wedding" class="content__wedding">
+               <a href="wedding.html">
+                  <h2>Свадьба</h2>
+               </a>
+               <div class="content__absolute"></div>
+            </div>
+            <div id="content__video" class="content__video">
+               <a href="video.html">
+                  <h2>Видео</h2>
+               </a>
+               <div class="content__absolute"></div>
+            </div>
+            <div id="content__other" class="content__other">
+               <a href="#">
+                  <h2>Разное</h2>
+               </a>
+               <div class="content__absolute"></div>
+            </div>
+         </div> <!-- content__wrapper -->
+        
+   </div><!-- wrapper  -->
+
+
+
+
+
+
+   <!-- библитотека jquery -->
+   <script src="./js/jquery-3.5.1.min.js"></script>
+   <!-- видеофон -->
+   <script src="./js/jquery.vide.min.js"></script>
+   <!-- плавный скролл -->
+   <script src="./js/jquery.malihu.PageScroll2id.min.js"></script>
+   <!-- слайдер -->
+   <script src="./js/slick.min.js"></script>
+   <!-- параллакс -->
+   <script src="./js/parallax.min.js"></script>
+   <!-- пояпление при прокрутке -->
+   <script src="./js/wow.min.js"></script>
+   <script>
+      new WOW(
+         {
+            offset: 100
+         }
+      ).init();
+   </script>
+   <!-- мой css  -->
+   <script src="./js/main.js"></script>
+</body>
+
+</html>
