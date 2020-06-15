@@ -124,38 +124,38 @@ h6 {
    /* font-family: 'Pacifico', cursive; */
    color: rgb(255, 196, 0);
 }
+
 /*! =========================================content====================== */
 .content__wrapper {
    margin-top: 100px;
-   height: 100%;
-   width: 100%;
    display: flex;
    justify-content: center;
+   flex-wrap: wrap;
    align-items: center;
-   /* flex-wrap: wrap; */
-   /* background: url(../img/home/home.jpg) center/cover no-repeat; */
+   min-height: 100vh;
+   background: url(../img/travelsPiter/home.jpg) center/cover no-repeat fixed;
 }
-.anya__photo {
+.content__photo {
    position: relative;
-   width: 50%;
-   height: 100%;
-   /* margin: 10px; */
+   width: 600px;
+   height: 600px;
+   margin: 10px;
    background: url(../img/home/аня.jpg) center/cover no-repeat;
    z-index: 1;
 }
-.anya__photo:hover .content__absolute {
+.content__photo:hover .content__absolute {
    opacity: 1;
    transition: 0.3s;
 }
-.anya__video {
+.content__video {
    position: relative;
-   width: 50%;
-   height: 100%;
-   /* margin: 10px; */
-   background: url(../img/home/travels.jpg) center/cover no-repeat;
+   width: 600px;
+   height: 600px;
+   margin: 10px;
+   background: url(../img/home/анявидео.jpg) center/cover no-repeat;
    z-index: 1;
 }
-.anya__video:hover .content__absolute {
+.content__video:hover .content__absolute {
    opacity: 1;
    transition: 0.3s;
 }
@@ -193,7 +193,6 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 1440px) {
-   
 }
 /*===============================================================*/
 @media (max-width: 1366px) {
@@ -206,13 +205,13 @@ h2 {
 }
 /*=============================BOOTSTRAP-C=======================*/
 @media (max-width: 1140px) {
-   .content__wrapper{
+   .content__wrapper {
       margin-top: 70px;
    }
    .header__menu,
    .header__list {
       height: 70px;
-   }   
+   }
    .header__item a {
       font-size: 30px;
    }
@@ -222,15 +221,6 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 1024px) {
-   .content__wrapper{
-      flex-direction: column;
-   }
-   .anya__photo{
-      width: 100%;      
-   }
-   .anya__video{
-      width: 100%;
-   }
 }
 /*======= 768px - 992px =======BOOTSTRAP=========================*/
 @media (max-width: 992px) {
@@ -243,31 +233,16 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 823px) {
-   .content__wrapper{
-      flex-direction: row;
-   }
-   .anya__photo{
-      width: 100%;      
-   }
-   .anya__video{
-      width: 100%;
-   }
 }
 /*===============================================================*/
 @media (max-width: 812px) {
-   .content__wrapper{
-      flex-direction: row;
-   }
-   
 }
 /*===============================================================*/
 @media (max-width: 800px) {
 }
 /*======= 576px - 768px========BOOTSTRAP========================*/
 @media (max-width: 768px) {
-   
 }
-
 /*===============================================================*/
 @media (max-width: 736px) {
 }
@@ -276,7 +251,6 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 667px) {
-   
 }
 /*===============================================================*/
 @media (max-width: 640px) {
@@ -292,36 +266,19 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 534px) {
-   .content__higth {
-      height: 400px;
-   }
 }
 /*===============================================================*/
 @media (max-width: 480px) {
 }
 /*===============================================================*/
 @media (max-width: 414px) {
-   .content__wrapper{
-      flex-direction: column;
-   }
-   .anya__photo{
-      width: 100%;      
-   }
-   .anya__video{
-      width: 100%;
+   .content__photo,
+   .content__video {
+      height: 400px;
    }
 }
 /*===============================================================*/
 @media (max-width: 375px) {
-   .content__wrapper{
-      flex-direction: column;
-   }
-   .anya__photo{
-      width: 100%;      
-   }
-   .anya__video{
-      width: 100%;
-   }
 }
 /*===============================================================*/
 @media (max-width: 360px) {
