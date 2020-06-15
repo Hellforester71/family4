@@ -75,8 +75,11 @@ h6 {
 }
 /*!---------------------О-Б-Н-У-Л-Е-Н-И-Е---------------------------*/
 
-/* !=================================================header-burger */
-
+/* !==============================================================header */
+.wrapper {
+   height: 100%;
+   width: 100%;
+}
 .header__menu {
    height: 100px;
    position: fixed;
@@ -122,43 +125,41 @@ h6 {
    color: rgb(255, 196, 0);
 }
 
-/*! ==============================content====================== */
-.wedding__wrapper {
+/*! =========================================content====================== */
+.content__wrapper {
    margin-top: 100px;
-   width: 100%;
-   height: 100%;
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    flex-wrap: wrap;
+   align-items: center;
+   min-height: 100vh;
+   background: url(../img/travelsPiter/home.jpg) center/cover no-repeat fixed;
 }
-.wedding__garden {
+.content__garden {
    position: relative;
-   flex: 1 1 0;
+   width: 600px;
+   height: 600px;
+   margin: 10px;
    background: url(../img/wedding/garden.jpg) center/cover no-repeat;
    z-index: 1;
 }
-.wedding__garden:hover .wedding__absolute {
+.content__garden:hover .content__absolute {
    opacity: 1;
    transition: 0.3s;
 }
-.wedding__zags {
+.content__zags {
    position: relative;
-   flex: 1 1 0;
+   width: 600px;
+   height: 600px;
+   margin: 10px;
    background: url(../img/wedding/zags.jpg) center/cover no-repeat;
    z-index: 1;
 }
-.wedding__zags:hover .wedding__absolute {
+.content__zags:hover .content__absolute {
    opacity: 1;
    transition: 0.3s;
 }
-.wedding__absolute {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(102, 102, 102, 0.651);
-   opacity: 0;
-   z-index: -1;
-}
+
 h2 {
    font-family: "Caveat", cursive;
    width: 100%;
@@ -166,10 +167,20 @@ h2 {
    display: flex;
    justify-content: center;
    align-items: center;
-   position: absolute;
+   text-align: center;  
    cursor: pointer;
-   font-size: calc(25px + 95 * (100vw / 2200));
+   font-size: calc(45px + 85 * (100vw / 2200));
    color: rgb(255, 196, 0);
+}
+.content__absolute {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(102, 102, 102, 0.651);
+   opacity: 0;
+   z-index: -1;
 }
 
 /*?=======================4096х1980=================================*/
@@ -192,16 +203,15 @@ h2 {
 }
 /*=============================BOOTSTRAP-C=======================*/
 @media (max-width: 1140px) {
+   .content__wrapper {
+      margin-top: 70px;
+   }
    .header__menu,
    .header__list {
       height: 70px;
    }
    .header__item a {
       font-size: 30px;
-   }
-   .wedding__wrapper {
-      margin-top: 70px;
-      flex-direction: column;
    }
 }
 /*===============================================================*/
@@ -221,13 +231,9 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 823px) {
-   .wedding__wrapper{
-      flex-direction: row;
-   }
 }
 /*===============================================================*/
 @media (max-width: 812px) {
-   
 }
 /*===============================================================*/
 @media (max-width: 800px) {
@@ -264,13 +270,13 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 414px) {
-   .wedding__wrapper{
-      flex-direction: column;
+   .content__garden,
+   .content__zags {
+      height: 400px;
    }
 }
 /*===============================================================*/
 @media (max-width: 375px) {
-  
 }
 /*===============================================================*/
 @media (max-width: 360px) {
