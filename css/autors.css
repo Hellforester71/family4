@@ -75,8 +75,11 @@ h6 {
 }
 /*!---------------------О-Б-Н-У-Л-Е-Н-И-Е---------------------------*/
 
-/* !=================================================header-burger */
-
+/* !==============================================================header */
+.wrapper {
+   height: 100%;
+   width: 100%;
+}
 .header__menu {
    height: 100px;
    position: fixed;
@@ -93,12 +96,9 @@ h6 {
    background-color: #050505;
    transition: 0.4s;
 }
-.header__list.active{
-   margin-left: 0;
-   transition: 0.4s;
-}
+
 .header__item {
-   position: relative;   
+   position: relative;
 }
 
 .header__item:after {
@@ -125,38 +125,55 @@ h6 {
    color: rgb(255, 196, 0);
 }
 
-
-
-/*! ==============================content====================== */
-.autors__wrapper {
+/*! =========================================content====================== */
+.content__wrapper {
    margin-top: 100px;
-   width: 100%;
-   height: 100%;
    display: flex;
-   justify-content: space-between;
-   flex: wrap;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: center;
+   min-height: 100vh;
+   background: url(../img/travelsPiter/home.jpg) center/cover no-repeat fixed;
 }
-.autors__igor {
+.content__igor {
    position: relative;
-   flex: 1 1 50%;
+   width: 600px;
+   height: 600px;
+   margin: 10px;
    background: url(../img/autors/2.jpg) center/cover no-repeat;
    z-index: 1;
 }
 
-.autors__lena {
+.content__lena {
    position: relative;
-   flex: 1 1 50%;
+   width: 600px;
+   height: 600px;
+   margin: 10px;
    background: url(../img/autors/1.jpg) center/cover no-repeat;
    z-index: 1;
 }
+
 h2 {
-   font-family: "Caveat", cursive;  
-   position: absolute;
-   bottom: 70px;
-   left: 50%;
-   transform: translateX(-50%);
-   font-size: calc(25px + 95 * (100vw / 2200));
+   font-family: "Caveat", cursive;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;  
+   cursor: pointer;
+   font-size: calc(45px + 85 * (100vw / 2200));
    color: rgb(255, 196, 0);
+}
+.content__absolute {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(102, 102, 102, 0.651);
+   opacity: 0;
+   z-index: -1;
 }
 
 /*?=======================4096х1980=================================*/
@@ -179,16 +196,15 @@ h2 {
 }
 /*=============================BOOTSTRAP-C=======================*/
 @media (max-width: 1140px) {
-   .header__menu,
-   .header__list{
-      height: 70px;
-   }  
-   .header__item a{
-      font-size: 30px;
-   }
-   .autors__wrapper {
+   .content__wrapper {
       margin-top: 70px;
-      flex-direction: column;
+   }
+   .header__menu,
+   .header__list {
+      height: 70px;
+   }
+   .header__item a {
+      font-size: 30px;
    }
 }
 /*===============================================================*/
@@ -196,9 +212,6 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 1024px) {
-   .autors__wrapper {     
-      flex-direction: row;
-   }
 }
 /*======= 768px - 992px =======BOOTSTRAP=========================*/
 @media (max-width: 992px) {
@@ -214,9 +227,6 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 812px) {
-   .autors__wrapper {     
-      flex-direction: row;
-   }
 }
 /*===============================================================*/
 @media (max-width: 800px) {
@@ -226,9 +236,6 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 736px) {
-   .autors__wrapper {      
-      flex-direction: row;
-   }
 }
 /*=============================BOOTSTRAP-C=========================*/
 @media (max-width: 720px) {
@@ -253,16 +260,16 @@ h2 {
 }
 /*===============================================================*/
 @media (max-width: 480px) {
-   
 }
 /*===============================================================*/
 @media (max-width: 414px) {
-   .autors__wrapper {     
-      flex-direction: column;   }
+   .content__igor,
+   .content__lena {
+      height: 400px;
+   }
 }
 /*===============================================================*/
 @media (max-width: 375px) {
-  
 }
 /*===============================================================*/
 @media (max-width: 360px) {
